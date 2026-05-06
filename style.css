@@ -1,0 +1,146 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0d0d0d;
+    color: white;
+    text-align: center;
+}
+
+/* HERO */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap: 50px;
+    padding: 20px;
+}
+
+.hero-img {
+    width: 50%;
+    max-width: 500px;
+    border-radius: 15px;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* BOTONES */
+.btn {
+    text-decoration: none;
+    background: #e10600;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 10px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: white;
+    color: #e10600;
+    transform: scale(1.1);
+}
+
+/* VOLVER */
+.volver {
+    display: inline-block;
+    margin: 20px;
+    text-decoration: none;
+    background: #e10600;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+}
+
+/* TEXTO */
+h1 {
+    font-size: 4vw;
+}
+
+h2 {
+    font-size: 3vw;
+}
+
+p {
+    font-size: 18px;
+    max-width: 900px;
+    margin: 10px auto;
+    padding: 0 15px;
+}
+
+/* IMAGENES */
+img {
+    width: 90%;
+    max-width: 700px;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+/* TABLA */
+table {
+    width: 90%;
+    max-width: 900px;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #444;
+}
+
+/* VIDEO */
+iframe {
+    width: 90%;
+    max-width: 800px;
+    height: 450px;
+    margin: 30px auto;
+    display: block;
+}
+
+/* PANTALLAS */
+.pantalla {
+    display: none;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+#inicio:target,
+#info:target,
+#video:target {
+    display: block;
+}
+
+/* MOSTRAR INICIO */
+body:not(:has(:target)) #inicio {
+    display: block;
+}
+
+/* 📱 RESPONSIVE */
+@media (max-width: 768px) {
+
+    .hero {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .hero-img {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 8vw;
+    }
+
+    h2 {
+        font-size: 6vw;
+    }
+
+    iframe {
+        height: 250px;
+    }
+}
